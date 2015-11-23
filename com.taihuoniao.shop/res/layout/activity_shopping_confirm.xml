@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.taihuoniao.shop.activity.ShoppingConfirmActivity" >
+
+    <ImageView
+        android:id="@+id/imageViewCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@android:drawable/checkbox_on_background" />
+
+    <TextView
+        android:id="@+id/textViewOrderConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewCheck"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/imageViewCheck"
+        android:text="@string/order_confirmed" />
+
+    <TextView
+        android:id="@+id/textViewOrderRidTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewOrderConfirm"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/textViewOrderConfirm"
+        android:text="@string/order_rid" />
+
+    <TextView
+        android:id="@+id/textViewOrderRid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textViewOrderRidTitle"
+        android:layout_alignBottom="@+id/textViewOrderRidTitle"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/colorHighLight"
+        android:text="@string/order_rid" />
+
+    <TextView
+        android:id="@+id/textViewOrderTotalPayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewOrderRidTitle"
+        android:layout_below="@+id/textViewOrderRidTitle"
+        android:layout_marginTop="5dp"
+        android:text="@string/order_total_pay" />
+    <TextView
+        android:id="@+id/textViewOrderTotalPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewOrderTotalPayTitle"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/textViewOrderRid"
+        android:textColor="@color/colorHighLight"
+        android:text="@string/order_total_pay" />
+
+    <TextView
+        android:id="@+id/textViewOrderPayWayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewOrderRidTitle"
+        android:layout_below="@+id/textViewOrderTotalPayTitle"
+        android:layout_marginTop="5dp"
+        android:text="@string/order_payway" />
+
+    <TextView
+        android:id="@+id/textViewOrderPayWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewOrderPayWayTitle"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorHighLight"
+        android:layout_alignLeft="@+id/textViewOrderRid"
+        android:text="@string/pay_online" />
+
+    <TextView
+        android:id="@+id/textViewChoosePayway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewOrderPayWay"
+        android:layout_marginTop="50dp"
+        android:layout_alignLeft="@id/imageViewCheck"
+        android:text="@string/choose_payway" />    
+    
+    <ImageView
+        android:id="@+id/imageViewAlipay"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/textViewChoosePayway"
+        android:layout_alignLeft="@id/textViewChoosePayway"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pay_alipay" />
+    <TextView
+        android:id="@+id/textViewAlipay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewAlipay"
+        android:layout_toRightOf="@+id/imageViewAlipay"
+        android:layout_marginLeft="30dp"
+        android:text="@string/alipay_payway" />    
+    <ImageView
+        android:id="@+id/ImageViewCheck02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewAlipay"
+        android:layout_alignParentRight="true"
+        android:src="@android:drawable/checkbox_on_background" />
+
+    <Button
+        android:id="@+id/buttonPay"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imageViewAlipay"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+    	android:background="@drawable/btn_add_address"
+    	android:textColor="@color/colorHighLight"        
+        android:text="@string/pay_go" />
+</RelativeLayout>

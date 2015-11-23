@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taihuoniao.shop.activity.UserInfoActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:clickable="true"
+        android:divider="@drawable/div_line_h"
+        android:dividerHeight="1px"
+        android:orientation="vertical"
+        android:showDividers="middle|end" >
+        <LinearLayout
+            android:id="@+id/user_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_press"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/list_margin"
+            android:paddingLeft="@dimen/list_margin_left"
+            android:paddingRight="@dimen/list_margin_left" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/title_user_pic"
+                android:textSize="@dimen/large_text_size" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+            <com.taihuoniao.shop.widget.ClipCircleImageView
+                android:id="@+id/avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/image_loading_background" />            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/list_margin"
+                android:src="@drawable/triangle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_press"
+            android:padding="@dimen/list_margin" 
+            android:clickable="true"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"           
+                android:text="@string/title_user_name"
+                android:textSize="@dimen/large_text_size" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1" />  
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"            
+                android:text="@string/title_user_name"
+                android:textSize="@dimen/large_text_size" />                
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/list_margin"
+                android:src="@drawable/triangle" />            
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_press"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/list_margin"
+            android:paddingTop="@dimen/list_margin_top" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/title_user_sex"
+                android:textSize="@dimen/large_text_size" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"            
+                android:text="@string/title_user_sex"
+                android:textColor="@color/colorBlackLte"
+                android:textSize="@dimen/large_text_size" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/list_margin"
+                android:src="@drawable/triangle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_press"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/list_margin"
+            android:paddingTop="@dimen/list_margin_top" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/title_user_city"
+                android:textSize="@dimen/large_text_size" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"            
+                android:text="@string/title_user_city"
+                android:textColor="@color/colorBlackLte"
+                android:textSize="@dimen/large_text_size" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/list_margin"
+                android:src="@drawable/triangle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_item_press"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/list_margin"
+            android:paddingTop="@dimen/list_margin_top" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/title_user_address"
+                android:textSize="@dimen/large_text_size" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"            
+                android:text="@string/title_user_address"
+                android:textColor="@color/colorBlackLte"
+                android:textSize="@dimen/large_text_size" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/list_margin"
+                android:src="@drawable/triangle" />
+        </LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="colorWhiteTransparent">#88FFFFFF</color>
+   <color name="colorWhite">#FFFFFF</color>
+   <color name="colorWhiteLte">#F2F2F2</color> 
+   <color name="colorDividerLte">#E1E1E1</color> 
+   <color name="colorDivider">#D1D1D1</color>   
+   <color name="colorGray">#A2A2A2</color>
+   <color name="colorBlackLte">#4B4B4B</color>
+   <color name="colorBlack">#2B2B2B</color>
+   <color name="colorHighLight">#FF2942</color>
+   <color name="colorWeiboBtnBg">#DD5747</color>
+   <color name="colorQQBtnBg">#3ABADA</color>
+   <color name="colorLoginBtnBg">#FF3366</color>
+   <color name="colorRegisterBtnBg">#FFFFFF</color>
+   <color name="colorHighLightBtn">#FF6187</color>
+   <color name="colorItemTitle">#E0707887</color>
+   <color name="colorItemText">#E09293A3</color>
+   <color name="colorBkRed">#FF3A31</color>
+</resources>

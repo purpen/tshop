@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhiteLte"
+    tools:context="com.taihuoniao.shop.activity.UserAddressActivity" >
+<com.taihuoniao.shop.widget.SwipeListView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id ="@+id/list"
+    android:layout_weight="1"
+    />
+
+<Button
+    android:id="@+id/register"
+    style="?android:attr/buttonStyleSmall"
+    android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/btn_add_address"
+    android:textColor="@color/colorHighLight"
+    android:onClick="onAddAddress"
+    android:text="@string/add_address" />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.taihuoniao.shop.fragment.ProductCommentFragment" >
+<com.taihuoniao.shop.widget.PullToRefreshListView
+    android:id = "@+id/list"
+    android:background="@color/colorWhiteLte"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1" 
+    />
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+<EditText android:layout_width="0dp"
+    android:layout_marginLeft="5dp"
+    android:background="@drawable/edit_text_gray"
+    android:layout_height="35dp"
+    android:textSize="@dimen/normal_text_size"
+    android:hint="@string/comment_something"
+    android:paddingLeft="5dp"
+    android:id="@+id/edit"
+    android:layout_weight="1"/>
+<Button android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:id="@+id/send"
+    android:text="@string/comment"
+    android:layout_marginLeft="5dp"
+    android:textColor="@color/colorWhiteLte"
+    android:background="@drawable/btn_comment"
+    />    
+</LinearLayout>
+</LinearLayout>

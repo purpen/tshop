@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_pressed="true">
+        <shape >
+		    <corners
+		        android:radius="9dp"
+		        android:topLeftRadius="5dp"
+		        android:topRightRadius="5dp"
+		        android:bottomLeftRadius="5dp"
+		        android:bottomRightRadius="5dp"/><!-- 设置圆角半径 -->
+			<solid android:color="@color/colorHighLightBtn"/>            
+        </shape>
+    </item>
+	<item >
+	    <shape >
+		    <corners
+		        android:radius="9dp"
+		        android:topLeftRadius="5dp"
+		        android:topRightRadius="5dp"
+		        android:bottomLeftRadius="5dp"
+		        android:bottomRightRadius="5dp"/><!-- 设置圆角半径 -->
+			<solid android:color="@color/colorHighLight"/>		        
+	    </shape>    
+	</item>
+</selector>

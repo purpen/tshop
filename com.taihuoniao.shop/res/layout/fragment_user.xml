@@ -1,0 +1,160 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taihuoniao.shop.UserFragment" >
+<LinearLayout android:layout_width="match_parent"
+       android:showDividers="middle|end"
+       android:divider="@drawable/div_line_h"
+       android:dividerHeight="1px"
+       android:dividerPadding="0dp"
+       android:layout_height="match_parent"
+       android:layout_margin="0dp"
+       android:clickable="true"
+       android:orientation="vertical">
+   <LinearLayout android:id="@+id/user_info" 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+	   android:padding="@dimen/list_margin"        
+       android:paddingLeft="@dimen/list_margin_left"
+       android:paddingRight="@dimen/list_margin_left"
+       android:clickable="true"
+       android:background="@drawable/list_item_press"
+       android:orientation="horizontal">
+       <com.taihuoniao.shop.widget.ClipCircleImageView android:id="@+id/avatar" 
+           android:src="@drawable/image_loading_background"
+           android:layout_width="50dp"
+           android:layout_height="50dp"/>
+      <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent" 
+           android:paddingLeft="8dp"
+           android:orientation="vertical"
+           >
+           <TextView android:id="@+id/nickname" 
+               android:text="nick name"
+               android:textColor="@color/colorBlack"
+               android:textSize="@dimen/normal_text_size"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <TextView android:id="@+id/address" 
+               android:text="beijing annhu"
+               android:paddingTop="3dp"
+               android:textSize="@dimen/lte_text_size"
+               android:textColor="@color/colorBlackLte"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+       <Space android:layout_height="1dp"
+           android:layout_width="wrap_content"
+           android:layout_weight="1"/>
+       <ImageView android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:src='@drawable/triangle'/>
+   </LinearLayout> 
+   <LinearLayout android:id="@+id/order" 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="@dimen/list_margin_top"
+       android:padding="@dimen/list_margin"   
+       android:clickable="true"    
+       android:background="@drawable/list_item_press"
+       android:orientation="horizontal">   
+       <TextView 
+           android:text="@string/title_order"
+           android:textSize="@dimen/large_text_size"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"/> 
+       <Space android:layout_height="1dp"
+           android:layout_width="wrap_content"
+           android:layout_weight="1"/>
+       <ImageView android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:src='@drawable/triangle'/>              
+   </LinearLayout>
+   <LinearLayout android:id="@+id/subject" 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="@dimen/list_margin_top"
+       android:padding="@dimen/list_margin" 
+       android:clickable="true" 
+       android:background="@drawable/list_item_press"  
+        android:orientation="horizontal"> 
+        <TextView 
+           android:text="@string/title_subject"
+           android:textSize="@dimen/large_text_size"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"/>     
+       <Space android:layout_height="1dp"
+           android:layout_width="wrap_content"
+           android:layout_weight="1"/>
+       <ImageView android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:src='@drawable/triangle'/>                    
+   </LinearLayout>
+   <LinearLayout android:id="@+id/favorite" 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="@dimen/list_margin_top"
+       android:padding="@dimen/list_margin"   
+       android:clickable="true" 
+       android:background="@drawable/list_item_press"         
+        android:orientation="horizontal">   
+       <TextView 
+           android:text="@string/title_favorite"
+           android:textSize="@dimen/large_text_size"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"/>  
+       <Space android:layout_height="1dp"
+           android:layout_width="wrap_content"
+           android:layout_weight="1"/>
+       <ImageView android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:src='@drawable/triangle'/>                      
+   </LinearLayout>
+   <LinearLayout android:id="@+id/message" 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="@dimen/list_margin_top"
+       android:padding="@dimen/list_margin" 
+       android:clickable="true" 
+       android:background="@drawable/list_item_press"
+       android:orientation="horizontal">   
+        <TextView 
+           android:text="@string/title_message"
+           android:textSize="@dimen/large_text_size"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"/>  
+       <Space android:layout_height="1dp"
+           android:layout_width="wrap_content"
+           android:layout_weight="1"/>
+       <ImageView android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:src='@drawable/triangle'/>                     
+   </LinearLayout>   
+   <LinearLayout android:id="@+id/logout" 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingTop="@dimen/list_margin_top"
+       android:padding="@dimen/list_margin"  
+       android:clickable="true" 
+       android:background="@drawable/list_item_press"         
+        android:orientation="horizontal">   
+        <TextView 
+           android:text="@string/title_logout"
+           android:textSize="@dimen/large_text_size"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"/>            
+   </LinearLayout>         
+</LinearLayout>
+</FrameLayout>

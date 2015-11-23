@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.com.taihuoniao.shop.LoginActivity" >
+    <TextView
+        android:id="@+id/textViewLog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/user"
+        android:hint="@string/phone"
+        android:text="13422886692"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/edit_text_thn"
+        android:phoneNumber="true"
+        android:singleLine="true"
+        android:maxLength="11"
+        android:ems="10"
+        android:inputType="none" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/pass"
+        android:hint="@string/pass"       
+        android:text="123456"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/user"
+        android:layout_alignRight="@id/user"
+        android:layout_below="@id/user"
+        android:layout_marginTop="20dp"
+        android:password="true"
+        android:maxLength="12"
+        android:background="@drawable/edit_text_thn"
+        android:ems="10" />
+
+        
+    <Button
+        android:id="@+id/login"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/user"
+        android:layout_alignRight="@id/user"        
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pass"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_weibo"
+        android:textColor="@color/colorWhite"
+        android:text="@string/login" />
+    <Button
+        android:id="@+id/fogot"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/user"
+        android:layout_alignRight="@id/user"        
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:text="@string/fogot"
+        android:textColor="@color/colorBlackLte"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

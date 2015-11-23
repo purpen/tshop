@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+<com.taihuoniao.shop.widget.ClipCircleImageView 
+    android:id="@+id/avatar"
+    android:src="@drawable/loading"
+    android:layout_width = "50dp"
+    android:layout_height="50dp"
+    android:layout_margin="10dp"/>
+    <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" 
+         android:layout_marginLeft="15dp"
+         android:orientation="vertical"
+         >
+         <TextView android:id="@+id/nickname" 
+             android:text="叶良辰"
+             android:layout_marginTop="5dp"
+             android:textColor="@color/colorBlack"
+             android:textSize="@dimen/small_text_size"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>         
+         <TextView android:id="@+id/created_on" 
+             android:text="三分钟前"
+             android:layout_marginTop="5dp"
+             android:layout_marginLeft="5dp"
+             android:layout_toRightOf="@id/nickname"
+             android:textColor="@color/colorBlack"
+             android:textSize="@dimen/small_text_size"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"/>
+         <TextView android:id="@+id/content" 
+             android:text="产品不错"
+             android:layout_marginTop="5dp"
+             android:layout_below="@id/nickname"
+             android:textSize="@dimen/large_text_size"
+             android:textColor="@color/colorBlackLte"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+         <com.taihuoniao.shop.widget.FlexibleRatingBar
+             android:id="@+id/star"
+             android:layout_width="60dp"
+             android:layout_height="15dp"
+             android:layout_marginLeft="5dp"
+             android:layout_alignBottom="@id/created_on"
+             android:layout_toRightOf="@id/created_on"
+				app:colorFillOff="@android:color/transparent"
+				app:colorFillOn="@color/colorHighLight"
+				app:colorFillPressedOff="@android:color/transparent"
+				app:colorFillPressedOn="@color/colorHighLight"
+				app:colorOutlineOff="@color/colorHighLight"
+				app:colorOutlineOn="@color/colorHighLight"
+				app:colorOutlinePressed="@color/colorHighLight"      
+			 android:visibility="invisible"       
+			 android:numStars="5"
+			 android:rating="3.5"
+			 android:stepSize="0.5"  
+             android:clickable="false"/>
+
+     </RelativeLayout>
+</LinearLayout>

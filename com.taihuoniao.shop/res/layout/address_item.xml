@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorWhiteLte"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    >    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/list_margin"
+    android:orientation="vertical" >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"   
+    android:orientation="horizontal" 
+    >
+<TextView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/normal_text_size"
+    android:textColor="@color/colorBlackLte"
+    android:text="@string/realname_"/>    
+<TextView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/normal_text_size"
+    android:textColor="@color/colorBlackLte" 
+    android:text=""   
+    android:id="@id/realname"/>    
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:visibility="gone"
+    android:orientation="horizontal">
+	<TextView android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="@dimen/lte_text_size"
+	    android:textColor="@color/colorBlackLte"    
+	    android:text=" "
+	    android:id="@+id/province"/>
+	<TextView android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="10dp"
+	    android:textSize="@dimen/lte_text_size"
+	    android:textColor="@color/colorBlackLte"    
+	    android:text=""
+	    android:id="@+id/city"/>    
+</LinearLayout>
+<TextView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/lte_text_size"
+    android:textColor="@color/colorBlackLte"  
+    android:layout_marginTop="10dp"  
+    android:layout_marginBottom="10dp"
+    android:text=""
+    android:id="@id/address"/>
+<TextView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/lte_text_size"
+    android:textColor="@color/colorBlackLte"    
+    android:text=""
+    android:layout_marginBottom="0dp"
+    android:id="@id/phone"/>      
+</LinearLayout>
+<RadioButton android:id="@+id/addr_default"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"   
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="10dp"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="20dp"
+    android:text="@string/addr_default"
+    android:enabled="false"
+    android:visibility="invisible"
+/>    
+</RelativeLayout>

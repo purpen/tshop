@@ -1,0 +1,8 @@
+bin/
+
+gen/
+.*/
+.gitgnore
+OffLineChat
+commit.bat
+commit2.bat

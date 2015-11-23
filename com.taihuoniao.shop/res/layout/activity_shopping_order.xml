@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhiteLte"
+    tools:context="com.taihuoniao.shop.activity.ShoppingOrderActivity" >
+<ScrollView
+    android:layout_height="0dp"
+    android:layout_width="match_parent"
+    android:layout_weight="1">
+    
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >        
+<include android:id="@+id/addressGroup" 
+    layout="@layout/address_item"/>
+
+	<View android:layout_width="match_parent"
+	    android:layout_height="1px"
+	    android:background="@color/colorDivider"/>	
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/colorBlack"        
+        android:text="@string/post_option" />	                 	
+    <Button
+        android:id="@+id/free_post"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/free_post"
+    	android:textSize="@dimen/normal_text_size"
+    	android:textColor="@color/color_red_gray_able" 
+    	android:background="@drawable/btn_round_rect_line_red"
+    	android:layout_height="35dp"
+    	android:layout_width="70dp"         
+         />
+	<View android:layout_width="match_parent"
+	    android:layout_height="1px"
+	    android:background="@color/colorDivider"/>	
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/colorBlack"        
+        android:text="@string/pay_option" />	                 	
+    <Button
+        android:id="@+id/pay_online"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+    	android:textSize="@dimen/normal_text_size"
+    	android:textColor="@color/color_red_gray_able" 
+    	android:background="@drawable/btn_round_rect_line_red"
+    	android:layout_height="35dp"
+    	android:layout_width="70dp"     
+        android:text="@string/pay_online"    />
+	<View android:layout_width="match_parent"
+	    android:layout_height="1px"
+	    android:background="@color/colorDivider"/>  
+<ListView 
+    android:id="@+id/list"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"    
+	android:background="@color/colorDivider"    
+    />	    
+	
+</LinearLayout>    
+</ScrollView> 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:gravity="center_vertical"
+    android:background="@color/colorDividerLte"
+    android:orientation="horizontal"
+    >
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorHighLight"
+    android:layout_marginLeft="15dp"
+    android:textSize="@dimen/large_text_size"
+    android:text="@string/total_cost"/>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorHighLight"
+    android:textSize="@dimen/large_text_size"
+    android:layout_marginLeft="5dp"
+    android:id="@+id/total_cost"
+    android:text="¥199"/>
+<Space android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"/>
+<Button 
+    android:textSize="@dimen/large_text_size"
+    android:textColor="@color/color_red_gray_able" 
+    android:background="@drawable/btn_round_rect_line_red"
+    android:layout_height="35dp"
+    android:layout_margin="10dp"    
+    android:id="@+id/confirm"
+    android:onClick="onConfirm"
+    android:text="@string/confirm_order"
+    android:layout_width="80dp"/>        
+</LinearLayout>          
+</LinearLayout>

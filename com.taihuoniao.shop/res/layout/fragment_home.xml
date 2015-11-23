@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taihuoniao.shop.HomeFragment" >
+	<com.taihuoniao.shop.widget.PullToRefreshGridView
+	    android:id="@+id/gridview"  
+	    android:layout_width="match_parent"   
+	    android:layout_height="match_parent"  
+	    android:layout_margin="5dp"
+	    android:numColumns="1"  
+	    android:verticalSpacing="5dp"  
+	    android:horizontalSpacing="5dp" 
+	    android:stretchMode="columnWidth"  
+	    android:gravity="center"  
+	/>
+</FrameLayout>
