@@ -133,7 +133,9 @@ public class CartFragment extends BaseStyleFragment {
 	}
 	
 	public void onCheckout(){
-		cartCheckout.setEnabled(false);
+		if(!ShopApp.self().testLogin(getActivity()))
+			return;		
+		cartCheckout.setEnabled(false);		
 		ShopHttpParams hp = ShopApp.self().doShoppingCheckout(jArray.toString());
 		sendUrlRequest(hp);
 	}

@@ -79,11 +79,15 @@ public class UserFragment extends BaseStyleFragment {
 				ShopHttpParams hp = ShopApp.self().doLogout();
 				sendUrlRequest(hp);				
 			}else if (v == user_info){
+				if(!ShopApp.self().testLogin(getActivity()))
+					return;				
 				FragmentActivity t = getActivity();
 				Intent intent = new Intent();
 				intent.setClass(t,UserInfoActivity.class);
 				t.startActivity(intent);
 			}else if(v==order){
+				if(!ShopApp.self().testLogin(getActivity()))
+					return;
 				FragmentActivity t = getActivity();
 				Intent intent = new Intent();
 				intent.setClass(t,ShoppingOrderListActivity.class);
@@ -99,7 +103,7 @@ public class UserFragment extends BaseStyleFragment {
 		final BaseStyleActivity bsa = (BaseStyleActivity)getActivity();
 		bsa.setBackAction(null);
 		ShopHttpParams hp = ShopApp.self().doGetUserInfo();
-		sendUrlRequest(hp);		
+		sendUrlRequest(hp);
 	}
 	private static final String CITY_KEY="city";
 	private static final String AVATAR_KEY="avatar";
@@ -131,14 +135,6 @@ public class UserFragment extends BaseStyleFragment {
 		ShopApp.self().showImageAsyn(avatar, mAvatar, R.drawable.image_loading_background);		
 	}
 	
-	public void testLogin(){
-		if(!ShopApp.self().isLogined()){
-			Intent intent = new Intent();
-			intent.setClass(getActivity(), StartActivity.class);
-			intent.putExtra(LoginActivity.DIRECT_TO_MAIN, false);
-			getActivity().startActivity(intent);
-		}
-	}
 	public void onUrlSuccess(ShopHttpParams hp, com.taihuoniao.shop.ShopApp.ResultData result){
 		if(hp.url.startsWith(ShopUtils.getUserInfoUrl())){
 			ShopApp.self().parseUserInfo(result);
@@ -149,7 +145,7 @@ public class UserFragment extends BaseStyleFragment {
 	};
 	public void onUrlFailure(ShopHttpParams hp, com.taihuoniao.shop.ShopApp.ResultData result){
 		if(hp.url.startsWith(ShopUtils.getUserInfoUrl())){
-			testLogin();
+			ShopApp.self().testLogin(getActivity());
 			ShopApp.self().showToast(getActivity(), result.message);
 		}else if(hp.url.startsWith(ShopUtils.getLogoutUrl())){
 			getActivity().finish();

@@ -75,6 +75,8 @@ public class ProductViewActivity extends BaseStyleActivity {
 		favorite.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
+				if(!ShopApp.self().testLogin(ProductViewActivity.this))
+					return;
 				// TODO Auto-generated method stub
 				boolean isChecked = favorite.isChecked();
 				favorite.setEnabled(false);
@@ -86,6 +88,8 @@ public class ProductViewActivity extends BaseStyleActivity {
 		love.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
+				if(!ShopApp.self().testLogin(ProductViewActivity.this))
+					return;
 				//加入到喜欢列表的代码
 				boolean isChecked = love.isChecked();
 				love.setEnabled(false);
@@ -224,6 +228,8 @@ public class ProductViewActivity extends BaseStyleActivity {
 		sendUrlRequest(hp);
 	}
 	public void onAdd(View v){
+		if(!ShopApp.self().testLogin(ProductViewActivity.this))
+			return;		
 		//添加到购物车的代码，还没有实现
 		if(sku_id == 0){
 			ShopApp.self().showToast(this, "请选择类型");
@@ -251,6 +257,8 @@ public class ProductViewActivity extends BaseStyleActivity {
 		startActivity(intent);		
 	}
 	public void onBuy(View v){
+		if(!ShopApp.self().testLogin(ProductViewActivity.this))
+			return;
 		if(sku_id == 0){
 			ShopApp.self().showToast(this, "请选择类型");
 			return;

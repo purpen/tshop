@@ -34,6 +34,7 @@ import android.app.Application;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.database.Cursor;
@@ -48,6 +49,8 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.taihuoniao.shop.activity.LoginActivity;
+import com.taihuoniao.shop.activity.StartActivity;
 import com.taihuoniao.shop.utils.AsynImageLoader;
 import com.taihuoniao.shop.utils.FileUtils;
 
@@ -1084,4 +1087,15 @@ public class ShopApp extends Application {
 		hp.url = ShopUtils.getShoppingCheckoutUrl();
 		return hp;
 	}
+	//测试登陆，如果没有登陆则返回false
+	public boolean testLogin(Context context){
+		if(!isLogined()){
+			Intent intent = new Intent();
+			intent.setClass(context, StartActivity.class);
+			intent.putExtra(LoginActivity.DIRECT_TO_MAIN, false);
+			context.startActivity(intent);
+			return false;
+		}
+		return true;
+	}	
 }
