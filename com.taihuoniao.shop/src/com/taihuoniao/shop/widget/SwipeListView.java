@@ -68,7 +68,7 @@ public class SwipeListView extends ListView{
 	}
 	private void Init(Context context){
 		mDensityScale =  getResources().getDisplayMetrics().density;
-        final ViewConfiguration configuration = ViewConfiguration.get(mContext);
+        final ViewConfiguration configuration = ViewConfiguration.get(context);
         mPagingTouchSlop = configuration.getScaledPagingTouchSlop();
         mPagingTouchSlop = configuration.getScaledTouchSlop();
         mSwipeDirection = X;

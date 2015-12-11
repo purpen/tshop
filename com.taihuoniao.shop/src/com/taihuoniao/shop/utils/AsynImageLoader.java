@@ -19,7 +19,8 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import android.R;
+import com.taihuoniao.shop.R;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -181,7 +182,7 @@ public class AsynImageLoader {
     //为了避免由于其中一个图片存在问题，导致线程堵塞，应该使用多个加载线程，这种情况下显然无法保证最后的图片被最后加载到imageview中
     //解决方案，对于同一个imageview 使用同一个加载任务，开始新的加载任务之前清除之前的加载任务
     public void showImageAsyn(ImageView imageView,String url){
-    	showImageAsyn(imageView,url,R.drawable.loading_tile_android);
+    	showImageAsyn(imageView,url,R.drawable.loading);
     }
     public void showImageAsyn(ImageView imageView, String url, int resId){  
     	if (url == null || url.isEmpty()){

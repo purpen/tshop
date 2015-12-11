@@ -247,11 +247,12 @@ public class AddUserAddressActivity extends BaseStyleActivity {
 	            throw new IllegalStateException(
 	                    "ArrayAdapter requires the resource ID to be a TextView", e);
 	        }
+	        Cursor cursor = getCursor();
 
-	        if (mDataValid) {
-	            mCursor.moveToPosition(position);
-	            String name = mCursor.getString(mCursor.getColumnIndex(ShopAppContentProvider.District.NAME));
-	            int id = mCursor.getInt(mCursor.getColumnIndex(ShopAppContentProvider.District._ID));
+	        if (cursor != null) {
+	        	cursor.moveToPosition(position);
+	            String name = cursor.getString(cursor.getColumnIndex(ShopAppContentProvider.District.NAME));
+	            int id = cursor.getInt(cursor.getColumnIndex(ShopAppContentProvider.District._ID));
 		        text.setText(name);
 		        view.setTag(id);
 	        }
